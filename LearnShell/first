@@ -1,0 +1,6 @@
+#! /bin/sh
+
+#赋值
+a = "helloworld"
+echo "a is:"
+echo $a

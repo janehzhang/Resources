@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://www.msyc.cc/job.html -->
+<html>
+	<head>
+		<script type="text/javascript" src="./common.js"></script>	<!--同级目录写成src="/common.js"不行，要写成src="./common.js"或者src="common.js" -->
+	</head>
+<body>
+
+<!--测试函数作用域
+	<script type="text/javascript">
+		var g = "globe"
+		function show(){
+			alert(g);
+			var g = "local";
+			alert(g);
+		}
+	</script>
+-->
+
+<!--Js使用正则表达式 -->
+<script type="text/javascript">
+	function testReg1(){
+		var regex = /\d{3}-\d{5}/;				//原来正则表达式写在  ‘/   /’   里面
+		alert(regex.test("332-23323"));					//正则表达式方法，用来测试字符串是否符合
+	}	
+
+	function testReg2(){
+		var pattern = /\w{2}(\w{2})(\w{2})/;  	//匹配省市县,()为分组
+		var result = pattern.exec("GDGZpy");	//若匹配成功字符串，exec()会返回一个数组，第一个元素是整个串，第二个是第一个分组，以此类推。
+		alert("citycode = "+ result[1]+",countycode = "+ result[2]);
+	}
+	function testReg3(){
+		var str = "<span>Welcome,John</soan>";
+		var result = str.replace(/span/g, "div");
+		alert(str+result);
+	}
+
+	//把<span>Welcome,John</soan>变成
+	function testReg4(){
+		var str = "<span>Welcome,John</soan>";
+		var result = str.replace(/(\w+),(\w+)/, "$2,$1");
+		alert(result);
+	}
+
+
+</script>
+
+
+    <input id="btn" type="button" align="center" value="testFunctionFiled" onclick="show()"></input>
+    <input id="btn" type="button" align="center" value="testRegex1" onclick="testReg1()"></input>
+    <input id="btn" type="button" align="center" value="testRegex2" onclick="testReg2()"></input>
+    <input id="btn" type="button" align="center" value="test String's Reg1" onclick="testReg3()"></input>
+    <input id="btn" type="button" align="center" value="test String's Reg2" onclick="testReg4()"></input>
+    
+</body>
+</html>
