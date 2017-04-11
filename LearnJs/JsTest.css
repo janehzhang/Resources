@@ -1,0 +1,22 @@
+.contentGray{
+	background:#ccc;
+	color: blue,
+	border: 1px solid black;
+	font: 13px 'Courier New';
+	width: 300px;
+	height: 30px;
+	padding-top:10px;
+	padding-left:10px;
+}
+
+
+.contentDark{
+	background:#111;
+	color: white,
+	border: 1px solid black;
+	font: 13px 'Courier New';
+	width: 300px;
+	height: 30px;
+	padding-top:10px;
+	padding-left:10px;
+}

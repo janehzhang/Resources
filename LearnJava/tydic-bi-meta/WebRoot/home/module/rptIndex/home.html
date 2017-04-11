@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function menuleft(id,onlyone){
+            if(!document.getElementById || !document.getElementsByTagName){return false;}
+            this.menu=document.getElementById(id);
+            this.submenu=this.menu.getElementsByTagName("ul");
+            this.speed=3;
+            this.time=10;
+            this.onlyone=onlyone==true?onlyone:false;
+            this.links = this.menu.getElementsByTagName("a");
+        }
+        menuleft.prototype.init=function(){
+            var mainInstance = this;
+            for(var i=0;i<this.submenu.length;i++){
+                this.submenu[i].getElementsByTagName("span")[0].onclick=function(){
+                    mainInstance.toogleMenu(this.parentNode);
+                };
+            }
+            for(var i=0;i<this.links.length;i++){
+                this.links[i].onclick=function(){
+                    this.className = "current";
+                    mainInstance.removeCurrent(this);
+                }
+            }
+        }
+        menuleft.prototype.removeCurrent = function(link){
+            for (var i = 0; i < this.links.length; i++){
+                if (this.links[i] != link){
+                    this.links[i].className = " ";
+                }
+            }
+        }
+        menuleft.prototype.toogleMenu=function(submenu){
+            if(submenu.className=="open"){
+                this.closeMenu(submenu);
+            }else{
+                this.openMenu(submenu);
+            }
+        }
+        menuleft.prototype.openMenu=function(submenu){
+            var fullHeight=submenu.getElementsByTagName("span")[0].offsetHeight;
+            var links = submenu.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++){
+                fullHeight += links[i].offsetHeight;
+            }
+            var moveBy = Math.round(this.speed * links.length);
+            var mainInstance = this;
+            var intId = setInterval(function() {
+                var curHeight = submenu.offsetHeight;
+                var newHeight = curHeight + moveBy;
+                if (newHeight <fullHeight){
+                    submenu.style.height = newHeight + "px";
+                }else {
+                    clearInterval(intId);
+                    submenu.style.height = "";
+                    submenu.className = "open";
+                }
+            }, this.time);
+            this.collapseOthers(submenu);
+        }
+        menuleft.prototype.closeMenu=function(submenu){
+            var minHeight=submenu.getElementsByTagName("span")[0].offsetHeight;
+            var moveBy = Math.round(this.speed * submenu.getElementsByTagName("a").length);
+            var mainInstance = this;
+            var intId = setInterval(function() {
+                var curHeight = submenu.offsetHeight;
+                var newHeight = curHeight - moveBy;
+                if (newHeight > minHeight){
+                    submenu.style.height = newHeight + "px";
+                }else {
+                    clearInterval(intId);
+                    submenu.style.height = "";
+                    submenu.className = "";
+                }
+            }, this.time);
+        }
+        menuleft.prototype.collapseOthers = function(submenu){
+            if(this.onlyone){
+                for (var i = 0; i < this.submenu.length; i++){
+                    if (this.submenu[i] != submenu){
+                        this.closeMenu(this.submenu[i]);
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function setTab(name,cursel,n){
+            for(i=1;i<=n;i++){
+                var menu=document.getElementById(name+i);
+                var top_bottom=document.getElementById("top_foot_bottomnet_"+name+"_"+i);
+                menu.className=i==cursel?"hover":"";
+                top_bottom.style.display=i==cursel?"block":"none";
+            }
+        }
+    </script>
+</head>
+
+<body onload="setSize()">
+<div class="both">
+    <div class="header">
+        <div class="top-1">
+            <span class="hyc">欢迎来到四川电信自助取数平台！</span>
+            <div class="tip"><a class="tips1" href="#">联系我们</a><a class="tips2" href="#">FAQ</a><a class="tips3" href="#">帮助</a></div>
+        </div>
+        <div class="top-2">
+            <div class="logo"></div>
+        </div>
+    </div>
+    <!-- end -->
+    <div class="content">
+        <div class="left">
+            <div id="menuleft" class="menuleft" style="float:left;">
+                <ul class="open">
+                    <span>我创建的报表 <img src="../../meta/module/reportManage/index/img/left-xl.png" width="12" height="12" /></span>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">1、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">2、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">3、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">4、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">5、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">6、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">7、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">8、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">9、重点产品发展监控</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">10、重点产品发展监控</a></li>
+                </ul>
+                <ul>
+                    <span>我收藏的报表 <img src="../../meta/module/reportManage/index/img/left-xl.png" width="12" height="12" /></span>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                </ul>
+                <ul>
+                    <span>我订阅的报表 <img src="../../meta/module/reportManage/index/img/left-xl.png" width="12" height="12" /></span>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                </ul>
+                <ul>
+                    <span>共享给我的报表 <img src="../../meta/module/reportManage/index/img/left-xl.png" width="12" height="12" /></span>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                </ul>
+                <ul>
+                    <span>公共报表 <img src="../../meta/module/reportManage/index/img/left-xl.png" width="12" height="12" /></span>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                    <li><img src="../../meta/module/reportManage/index/img/left-jt.png" width="12" height="12" /><a href="#">张碧波</a></li>
+                </ul>
+                <script type="text/javascript">
+                    window.onload = function() {
+                        myMenu = new menuleft("menuleft",true);
+                        myMenu.init();
+                    };
+                </script>
+                <script type="text/javascript">
+                    function settab_mid_top(name,num,n){
+                        for(i=1;i<=n;i++){
+                            var menu=document.getElementById(name+i);
+                            var con=document.getElementById(name+"_"+"mid_top"+i);
+                            menu.className=i==num?"on_mid_top":"";
+                            con.style.display=i==num?"block":"none";
+                        }
+                    }
+                </script>
+                <div style="clear:both"></div>
+            </div>
+
+
+        </div>
+        <div class="mid">
+            <div class="mid-top">
+                <div class="tab">
+                    <div style="float:left;width:80%;">
+                        <ul>
+                            <li id="mid_top_net1" style="margin-left:10px; 	border-left:1px solid #CCCCCC;" onclick="settab_mid_top('mid_top_net',1,4)" class="on_mid_top">一号</li>
+                            <li id="mid_top_net2" onclick="settab_mid_top('mid_top_net',2,4)">二号</li>
+                            <li id="mid_top_net3" onclick="settab_mid_top('mid_top_net',3,4)">三号</li>
+                            <li id="mid_top_net4" class="suo-mid" onclick="settab_mid_top('mid_top_net',4,4)">搜索结果</li>
+                        </ul>
+                    </div>
+                    <div class="top-ssuo">
+                        <input class="bdan" type="text" /><a href="#" class="btn-ssmx">          </a></div>
+                </div>
+                <div class="list">
+                    <div id="mid_top_net_mid_top1">
+                        <div>
+                            <div id="lib_top_foot_bottomnet" class="lib_top_bottomnet">
+                                <div class="lib_menubox_top_bottomnet">
+                                    <ul>
+                                        <li id="top_bottom1" onclick="setTab('top_bottom',1,5)" class="hover">用户类</li>
+                                        <li id="top_bottom2" onclick="setTab('top_bottom',2,5)">终端类</li>
+                                        <li id="top_bottom3" onclick="setTab('top_bottom',3,5)">测试一</li>
+                                        <li id="top_bottom4" onclick="setTab('top_bottom',4,5)">测试二</li>
+                                        <li id="top_bottom5" onclick="setTab('top_bottom',5,5)">测试三</li>
+                                    </ul>
+                                </div>
+                                <div class="lib_contentbox_top_bottomnet">
+                                    <div id="top_foot_bottomnet_top_bottom_1" ><span class="checkbox-top"><input class="checkboxs" type="checkbox" /><span>指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标指标</span></span></div>
+                                    <div id="top_foot_bottomnet_top_bottom_2" style="display:none">123</div>
+                                    <div id="top_foot_bottomnet_top_bottom_3" style="display:none">234</div>
+                                    <div id="top_foot_bottomnet_top_bottom_4" style="display:none">345</div>
+                                    <div id="top_foot_bottomnet_top_bottom_5" style="display:none">456</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mid_top_net_mid_top2" style="display:none;">
+                        <div class="ssuo-content">222222222222222222222222</div>
+                    </div>
+                    <div id="mid_top_net_mid_top3" style="display:none;">
+                        <div class="ssuo-content">3333333333333333333333333333</div>
+                    </div>
+                    <div id="mid_top_net_mid_top4" style="display:none;">
+                        <div class="ssuo-content"></div>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="yxzb2">
+                    <span class="mid-btt" style="margin-left:10px;">已选指标：</span><div class="xzzb"><a href="#" class="yxzb1">123123</a></div>
+                    <span class="ssmx">
+                    <input class="bdan" type="text" /><a href="#" class="btn-ssmx"></a></span>
+                </div>
+                <div class="mid-px">
+                    <span class="mid-bt" style="margin-left:10px;">排序</span>
+                    <a class="mid-a1" href="#" style="border:1px solid #ff6600;">应用数</a>
+                    <a class="mid-a2" href="#">创建时间</a>
+
+                    <span class="mid-bt1">共找到相关记录<font style="color:red;">500</font>条</span>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mid-foot">
+                <div class="mx">
+                    <div>
+                        <div style="border-bottom:1px solid #dbdbdb; float:left;margin-bottom:10px;">
+                            <a href="#" class="biaoti">用户流量分群数据</a><a class="yy" href="#">（应用100个/</a><a class="yy" href="#">2012-03-03创建）</a><a href="#" class="cjbb">创建报表</a>
+                            <ul class="mid-foot-content">
+                                <li><span class="mid-foot-bt">维&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><span class="mid-foot-content">新增用户数、拆机用户数、累计新增用户数、计费用户数、用户到达数
+</span></li>
+                                <li><span class="mid-foot-bt">指&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标：</span><span class="mid-foot-content">第二部手机以上、天翼用户净增情况、新增用户数、新增终端用户数
+</span></li>
+                                <li><span class="mid-foot-bt">创建时间：</span><span class="mid-foot-content">2012/04/10
+</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more"><a href="#">查看更多新信息↓</a></div>
+                </div>
+
+                <div class="xs">
+                    <span class="lt"></span><span class="rt"></span><span class="lb"></span><span class="rb"></span>
+                    <span class="bbbt">相似报表</span>
+                    <ul class="mid-bb">
+                        <li><a href="#">重点产品发展监控</a><span class="bfb">99%</span></li>
+                        <li><a href="#">融合业务发展监控</a><span class="bfb">99%</span></li>
+                        <li><a href="#">周零次用户日报</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+                        <li><a href="#">测试进行测试测试测试测试</a><span class="bfb">99%</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- end -->
+</div>
+</body>
+</html>

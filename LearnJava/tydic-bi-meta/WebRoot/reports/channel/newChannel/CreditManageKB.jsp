@@ -1,0 +1,102 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page import="java.util.*"%>
+<%@page import="tydic.reports.channel.newChannel.NewChannelDao"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<% 
+	String dateTime=(String)request.getParameter("dateTime");
+   	NewChannelDao dao=new NewChannelDao();
+	 String areaCode="0000";
+	 List<Map<String,Object>> monList=dao.getSelectMon2("XX_MKF_YDXYGL_KB");
+	 if(dateTime==null || dateTime.equals("") ){
+      	dateTime=dao.getNewMonth("XX_MKF_YDXYGL_KB");
+    }
+	 String zoneCode = request.getParameter("zoneCode")==null?areaCode:(String)request.getParameter("zoneCode");
+	String queryType= (String)request.getParameter("queryType");	 
+
+%>
+<head>
+    <%@include file="../../../portalCommon/public/head.jsp"%>
+    <%@include file="../../../portalCommon/public/include.jsp" %>
+    <title><%=menuName %></title>
+    <script type="text/javascript"   src="<%=rootPath%>/dwr/interface/NewTwoChannelAction.js"></script>
+    <script type="text/javascript"   src="<%=rootPath%>/dwr/interface/CmplIndexAction.js"></script>
+    <script type="text/javascript"   src="<%=rootPath%>/dwr/interface/ZoneAction.js"></script>
+    <script type="text/javascript"   src="<%=rootPath%>/js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript"   src="<%=rootPath%>/js/common/zoneTree.js"></script>
+    <script type="text/javascript" src="<%=rootPath%>/js/common/page.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=rootPath%>/css/fpage.css" />
+    <link rel="stylesheet" type="text/css" href="<%=rootPath%>/css/style01.css">
+    <link rel="stylesheet" type="text/css" href="<%=rootPath%>/css/style02.css">
+ 
+	<style type="text/css"> 
+		.unl {
+	    text-decoration:underline;
+		color: #0000FF;
+		cursor: pointer;
+	}
+	</style>
+	 <script type="text/javascript">
+		var queryType = '<%= queryType%>';
+	
+	</script>	
+</head>
+<body style="width: 100%;height:auto!important;overflow-y: visible;overflow-x: visible;">
+	 <form id="queryform" name="queryform">
+	   <input type="hidden" id="excelTitle"   name="excelTitle"    value=<%=menuName %> />
+       <input type="hidden" id="excelHeader"  name="excelHeader"   />
+       <input type="hidden" id="excelData"    name="excelData"   />
+       <input type="hidden" id="totalCount"   name="totalCount"    /> 
+       <input type="hidden" id="excelCondition"    name="excelCondition"     />
+       <input type="hidden" value="tydic.reports.channel.newChannel.NewChannelAction"   name="class"     />
+       <input type="hidden" value="getCreditManageKBData"    name="classMethod"   />
+       <input type="hidden" id="path"    name="path" value=""     /> 
+        <input type="hidden" id="existFile"    name="existFile" value="1" />
+          <input type="hidden" id="explain"    name="explain"   />
+	    <table width='100%' >
+		  <tr>
+			 <td valign="top" width="100%">
+				 <table  width='100%'  border='0'  style='border: 1px solid #87CEFF;'  cellpadding='0px' cellspacing='0px'>
+					 <tr>
+					  <td>
+						 <table  width="1050"  border="0" cellpadding="0" cellspacing="0">
+					      <tr>
+							<td>&nbsp;&nbsp;&nbsp;月份:
+					          <select id="dateTime"    name="dateTime" style="width: 80px;">
+					           <% for(Map<String, Object> key:monList ){  
+					            if(dateTime.equals(key.get("MONTH_ID").toString())){%>
+					           <option value="<%=key.get("MONTH_ID") %>" selected><%=key.get("MONTH_ID").toString() %></option>
+					               <%  }else{%>
+					               <option value="<%=key.get("MONTH_ID")%>"><%=key.get("MONTH_ID").toString() %></option>
+					            	   <% }
+					            	   }%>  
+					          </select>
+					          </td>
+						       <td>&nbsp;&nbsp;&nbsp;区域:
+								   <input type="hidden""  id="zoneCode"  value=<%=zoneCode%>  name="zoneCode" />
+								   <input type="text"     id="zone"  size="14"      name="zone" />
+							  </td>							  
+	       <td><input type='button'  class="poster_btn" id="impBtn"  name="impBtn"  value="文本导出"    onclick="downloadFile();"    style="width:80px;" /></td>
+	     </tr>
+													</table>			        
+										    </td>
+										</tr>
+							  </table>
+							  </td>
+							  </tr>	
+			        <tr>
+			          <td width="50%"> 
+		                   <div id="chartTable" style="margin: 0px;padding: 0px;width: 100%;height: auto;"> 
+		                   </div>
+		                   <center>
+	                              <div id="pageDiv"   style="margin: 0px;padding: 0px;width: 100%;height: auto;"
+	                               align="left" ></div>   
+	                       </center>   
+                       </td>
+                   </tr>    
+	      </table>
+	</form>	
+   <iframe name="hiddenFrame" width=0 height=0 src=""></iframe>
+</body>
+</html>
+<script type="text/javascript" src="CreditManageKB.js"></script>

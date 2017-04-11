@@ -1,0 +1,25 @@
+/* CSS Document */
+.title_ma{font:14px;color:#033C71; font-weight:bold; FILTER: DropShadow(Color=#ffffff, OffX=1, OffY=1, Positive=1); width:130px};
+.title_ma1{font:14px;color:#033C71; font-weight:bold; FILTER: DropShadow(Color=#ffffff, OffX=1, OffY=1, Positive=1)};
+.title_mo a{font:12px; color:#3C70A0; text-decoration:none}
+
+.content{SCROLLBAR-FACE-COLOR: #F2F8FE; 
+	  SCROLLBAR-HIGHLIGHT-COLOR: #C5DBF4; 
+	  SCROLLBAR-SHADOW-COLOR: #C5DBF4;
+	  SCROLLBAR-3DLIGHT-COLOR: #fff; 
+	  SCROLLBAR-ARROW-COLOR: #7CA5DB; 
+	  SCROLLBAR-TRACK-COLOR: #ffffff; 
+	  SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+	  height:585px; overflow-y:scroll;
+	  border:1px solid #7CA5DB;
+	  }
+
+.lll {height:160px;vertical-align:top};	  
+.lll ul{margin:5,5,5,10; padding-left:10;}
+.lll li{list-style:url(../images/dot_1.gif) disc; line-height:140%;color:#333333; height:22px; background:url(../images/line.gif) repeat-x bottom;}
+
+
+.right_tab{border:1px solid #7CA5DB;text-align:center;color:#033C71;}
+.right_tab td{font-weight:bold; padding:3 0 4}
+
+.bottom_img a{padding:0 10;}

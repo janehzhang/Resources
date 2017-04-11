@@ -1,0 +1,516 @@
+body
+{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+	border-color:#808080 #FFFFFF #FFFFFF #808080; 
+	border-style:none; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px;
+	font-family: "Arial", "宋体";
+	font-size: 12px;
+	SCROLLBAR-FACE-COLOR: menu; 
+    SCROLLBAR-HIGHLIGHT-COLOR: menu; 
+    SCROLLBAR-SHADOW-COLOR: #999999; 
+    SCROLLBAR-3DLIGHT-COLOR: #777777; 
+    SCROLLBAR-ARROW-COLOR: #ffffff;  
+    SCROLLBAR-TRACK-COLOR: #dddddd; 
+    SCROLLBAR-DARKSHADOW-COLOR: menu;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.plusMinus
+{
+	width:12px;
+	height:10px;
+	text-align:center;
+	line-height:20px;
+	font-size: 14px;
+	font-weight:bold;
+}
+.paddinLeftRight5px
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+table td {
+	font-family: "Arial", "宋体";
+	font-size: 12px;
+	}
+
+.input150px
+{
+	width: 180px;
+}
+.dataPrivTable
+{
+	background-color: #0076A3;
+	border-spacing:1px;
+	border-collapse: separate;
+	width: 100%;
+	height: 100%;
+		
+}
+.rptCanvas_Model
+{
+	background-color: #F5F5F5;
+}
+.rptTermTr
+{
+	background-color: #F5F5F5;
+}
+.dataSrcTable
+{
+	background-color: #F0F0F0;
+	border-spacing:1px;
+	border-collapse: separate;
+	width: 100%;
+	height: 100%;
+}
+.proWinColumnAttrTable
+{
+	background-color: #aaaaaa;
+	border-spacing:1px;
+	border-collapse: separate;
+	width: 100%;
+	height: 100%;
+}
+.rptTermBackColor
+{
+	background-color: #EBF4F9;
+}
+.rptTermTable
+{
+	background-color: #779B9B;
+	border-spacing:1px;
+	border-collapse: separate;
+	width: 100%;
+	height: 100%;
+}
+.dataSrcTitleTd
+{
+	background-color: #D0D0F0;
+	padding-left: 10px;
+}
+.rptTermLabelTd
+{
+	width:130px;
+	background-color: #E6F8FA;
+	text-align: right;
+	padding-right: 2px;
+}
+.dataSrcLabelTd
+{
+	width:130px;
+	background-color: #E6F8FA;
+	text-align: right;
+	padding-right: 2px;
+}
+.dataSrcInputTd
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	padding-left: 5px;
+	width: 35%;
+}
+.dataSrcColAttrTable
+{
+	background-color: #F0F0FF;
+}
+.dataSrcColAttrHead
+{
+	background-color: #C0D0FF;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	height:22px;
+}
+.dataSrcColAttrRow
+{
+	background-color: #FFFFFF;
+}
+.dataSrcColAttrAlrRow
+{
+	background-color: #F0F0FF;
+}
+.dataSrcColAttrTD
+{
+	padding-left: 5px;
+}
+.gdlExplain
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	COLOR: #AF9F00;
+}
+.red
+{
+	COLOR: #FF0000;
+}
+.hand
+{
+	cursor: pointer;
+}
+
+.inuptText
+{
+}
+.pro_more_button
+{
+	height:20px;
+	width:25px;
+	border:0px;
+}
+.freezeBorderRight
+{
+	border-right:2px solid #000000;
+}
+.freezeBorderBottom
+{
+	border-bottom:2px solid #000000;
+
+}
+
+html {
+	border:	0;
+	overflow:	hidden;
+}
+.menu-bar {
+	border-bottom:	2px groove;
+}
+.warning {
+	color:yellow;
+}
+.buttonBG {
+	BORDER-RIGHT: #888888 1px ridge;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: #AAAAAA 1px ridge;
+	PADDING-LEFT: 1px;
+	FONT-SIZE: 10pt;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: #AAAAAA 1px ridge;
+	COLOR: #000000;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #888888 1px ridge;
+	HEIGHT: 20px;
+	BACKGROUND-COLOR: #f1f1f1;
+	cursor: hand;
+	background-image: url(images/but_BG.jpg);
+}
+.div
+{
+	SCROLLBAR-FACE-COLOR: menu; 
+    SCROLLBAR-HIGHLIGHT-COLOR: menu; 
+    SCROLLBAR-SHADOW-COLOR: #999999; 
+    SCROLLBAR-3DLIGHT-COLOR: #777777; 
+    SCROLLBAR-ARROW-COLOR: #ffffff;  
+    SCROLLBAR-TRACK-COLOR: #dddddd; 
+    SCROLLBAR-DARKSHADOW-COLOR: menu
+}
+<!--属性窗口标签 -->
+.property_table td
+{
+	font-family:"Arial",  "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	
+}
+.table
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+}
+
+DIV.Head_TD{	
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 25px;
+	background-color:#D0E8FF;
+	font-weight:bold;
+	color: #000000;	
+}
+.Head_TD 
+{	
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 25px;
+	background-color:#D0E8FF;
+	font-weight:bold;
+	color: #000000;	
+}
+.Row_TD
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+    background-color:#EAFBFF;
+}
+
+DIV.Row_TD
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+    background-color:#FAFBFF;
+}
+.Alt_Row_TD{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+	background-color:White;
+}
+DIV.Alt_Row_TD
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+	background-color:White;
+}
+
+.HightRow_TD{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+	background-color:#F0F0F0;
+}
+DIV.HightRow_TD
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+	background-color:#F0F0F0;
+}
+
+ .blue{color: #0000FF;}
+A.blue:link{color: #0000FF;}
+A.blue:hover{color: #0000FF;}
+A.blue:visited{color: #0000FF;}
+A.blue:active{color: #0000FF;}
+
+A:link {
+	COLOR: #0000FF;TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #0404ee;TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #FF0000;TEXT-DECORATION: underline;
+}
+A:active {
+	COLOR: #aa0000; TEXT-DECORATION: underline;
+}
+A.unline:link {
+	COLOR: #0000AA; TEXT-DECORATION: none
+}
+A.unline:visited {
+	COLOR: #0000AA; TEXT-DECORATION: none
+}
+A.unline:hover {
+	COLOR: #ff0000; BORDER-BOTTOM: #ff0000 1px inset; TEXT-DECORATION: none
+}
+A.unline:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.RedLink:link {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; COLOR: #ff0000; BORDER-BOTTOM: medium none; TEXT-DECORATION: none
+}
+A.RedLink:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.RedLink:hover {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; COLOR: #000000; BORDER-BOTTOM: medium none; TEXT-DECORATION: underline
+}
+A.RedLink:active {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+
+.TEXTAREA {
+	FONT-SIZE: 12px; BACKGROUND-COLOR: #efefef;
+}
+.TableLine {
+	BORDER-COLLAPSE: collapse
+}
+  
+.hand {
+	CURSOR:pointer;
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.modcss
+{
+	background-image : url(images/imgs/blank.gif);
+}
+
+ 
+ 
+ 
+.bottom {
+	FONT-SIZE: 12px; COLOR: #000000;
+}
+.headLink:link {
+	COLOR: #000000
+}
+.headLink:visited {
+	COLOR: #000000
+}
+.headLink:hover {
+	COLOR: #ff0000
+}
+
+ .tag_searchbt{
+	background-image: url(./images/bt_tag_search.gif);
+	height: 22px;
+	width: 50px;
+	margin: 0px 3px;
+	vertical-align: middle;
+	cursor:hand;
+}
+input.btbg{
+	background-image:url(./images/btbg.gif);
+	height: 21px;
+	width: 45px;
+	margin: 3px;
+	border: 0px;
+	cursor:hand;
+} 
+
+input.btbgb{
+	background-image:url(./images/btbgb.jpg);
+	height: 21px;
+	width: 60px;
+	margin: 3px;
+	border: 0px;
+	cursor:hand;
+}
+input.sbt{
+	background-image:url(./images/sbt.jpg);
+	height: 20px;
+	width: 25px;
+	margin: 2px;
+	border: 0px;
+	cursor:hand;
+	background-position: center;
+}
+
+
+.propertyMoveHandle
+{
+	position:absolute;
+	width:5px;
+	height:100%;
+	background-color:#f4f5eb;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+	border-left-style: solid;
+	border-left-width: 2px; 
+	border-left-color: #b3b6b0;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-right-color: #b3b6b0;
+    cursor: col-resize;
+}
+
+.property_ids {
+	border-width:		1px;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+	padding:			0px ;		
+}
+.property_move_vhandle
+{
+	position:absolute;
+	width:100%;
+	height:1px;
+	border:1px;
+	background-color:#f4f5eb;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+	
+	border-top-style: solid;
+	border-top-width: 2px; 
+	border-top-color: #b3b6b0;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #b3b6b0;
+    cursor:n-resize;
+}
+
+
+
+ 
+
+table.PageStyle 
+{
+   BACKGROUND-COLOR: LightBlue ;   
+   font-family: "宋体";
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+}
+.tableDiv { MARGIN: 0px -16px 0px 0px }
+DIV.tableContainer
+{
+    BACKGROUND-COLOR: #ffffff ;
+    width:expression(document.body.offsetWidth-28);
+    height:expression(document.body.offsetHeight-100);
+}
+
+.tableDiv { MARGIN: 0px -16px 0px 0px }
+THEAD.fixedHeader tr { POSITION: relative;  TOP: expression(document.getElementById("tableContainer").scrollTop) }
+THEAD.fixedHeader TH { BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #eee 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid; TEXT-ALIGN: center }
+THEAD.fixedHeader A { DISPLAY: block; COLOR: #fff; TEXT-DECORATION: none }
+THEAD.fixedHeader A:link { DISPLAY: block; COLOR: #fff; TEXT-DECORATION: none }
+THEAD.fixedHeader A:visited { DISPLAY: block; COLOR: #fff; TEXT-DECORATION: none }
+THEAD.fixedHeader A:hover { DISPLAY: block; COLOR: #fff; TEXT-DECORATION: underline }
+.scrollContenttd { BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 2px; BORDER-LEFT: #eee 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid }
+.th{BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #eee 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid; TEXT-ALIGN: center}
+
+.a1 { background-image: url('T_bg.gif') } 
+
+DIV.explain
+{
+	position:absolute;
+	border-right: #666600 1px solid; 
+	border-top: #666600 1px solid;    
+    border-left: #666600 1px solid; width: 100px;
+    border-bottom: #666600 1px solid;
+    margin: 0px; 
+	BACKGROUND-COLOR: #ffffdc;  
+	FONT-SIZE: 12px; COLOR: #222222;
+	
+}

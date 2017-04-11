@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+     <web-app xmlns="http://java.sun.com/xml/ns/j2ee"     
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     
+                      xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"     
+                      version="2.4">    
+    <context-param>
+        <param-name>conf_props</param-name>
+        <param-value>config.properties,local.properties</param-value>
+    </context-param>
+    <!--定义系统启动时的实现类，这些类会在系统系统时被调用,多个以","号分隔  ,tydic.meta.web.TimerInit-->
+    <context-param>
+        <param-name>sysStartInitClass</param-name>
+        <param-value>tydic.frame.web.init.SystemVariableInit,tydic.frame.web.init.DataSourceManagerInit
+            ,tydic.meta.web.DataSourceInit,tydic.meta.web.MenuDataInit,tydic.meta.module.mag.timer.job.MetaTimerAssign
+            ,tydic.meta.web.session.SessionInit,tydic.meta.web.CodesInit,tydic.meta.web.I18nInit
+            </param-value>
+    </context-param>
+    <listener>
+        <listener-class>tydic.frame.web.SystemInitListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>tydic.meta.web.session.SessionAttributeListener</listener-class>
+    </listener>    
+    
+	<!-- 信息安全审核 -->                                          
+	<filter>                                                       
+	    <filter-name>XSSFiler</filter-name>                        
+	    <filter-class>                                             
+	        tydic.meta.web.XSSSecurityFilter                      
+	    </filter-class>                                            
+	    <init-param>                                               
+	        <param-name>securityconfig</param-name>                
+	        <param-value>                                          
+	            /WebRoot/config/xss/xss_security_config.xml        
+	        </param-value>                                         
+	    </init-param>                                              
+	</filter>                                                      
+	<!-- 拦截请求类型 -->                                          
+	<filter-mapping>                                               
+	    <filter-name>XSSFiler</filter-name>                        
+	    <url-pattern>*.jsp</url-pattern>                           
+	</filter-mapping>                                              
+	<filter-mapping>                                               
+	    <filter-name>XSSFiler</filter-name>                        
+	    <url-pattern>*.do</url-pattern>                            
+	</filter-mapping>                                              
+
+    
+    <filter>
+        <filter-name>authFilter</filter-name>
+        <filter-class>tydic.meta.web.AuthFilter</filter-class>
+        <init-param>
+            <param-name>redirectURL</param-name>
+            <param-value>/meta/public/redirect.jsp</param-value>
+        </init-param>
+        <init-param>
+            <!--无须登录可以直接访问的资源，这里写JAVA风格的正则表达式,多个以”，“号分隔-->
+            <!--其中${rootPath}变量代表根目录-->
+            <param-name>publicReg</param-name>
+            <param-value>${rootPath}/,${rootPath}/meta/public/.*,${rootPath}/resource/.*,
+                ${rootPath}/portal/public/.*,${rootPath}/meta/resource/.*,
+                ${rootPath}/portal/resource/.*,${rootPath}/portal/error/.*,
+                ${rootPath}/meta/error/.*,${rootPath}/portal/dowLoad/.*,
+                ${rootPath}/portalCommon/public/include.jsp,
+                ${rootPath}/portalCommon/public/head.jsp,
+                ${rootPath}/js/.*,
+                ${rootPath}/css/.*,
+                <!-- ${rootPath}/dwr/.*, -->
+                ${rootPath}/webService/.*,
+                ${rootPath}/portal/login_sso.jsp,
+                ${rootPath}/portal/login_eiac_sso.jsp,
+                ${rootPath}/portal/login_eiac_ewam.jsp,
+                ${rootPath}/portal/index.jsp,
+                ${rootPath}/portalCommon/module/serviceControl/index.jsp,
+                ${rootPath}/portalCommon/module/serviceControl/step_install_day.jsp,
+                ${rootPath}/portalCommon/module/serviceControl/step_install_mon.jsp,
+                ${rootPath}/portal/error.jsp,
+                ${rootPath}/reports/customerSatisfied/noSatisDetail/ShowNotSatisDetail.jsp,
+                ${rootPath}/reports/customerSatisfied/noSatisDetail/ShowNotSatisDetail.jsp*,
+                ${rootPath}/reports/customerSatisfied/noSatisDetail/ShowNotSatisDetail.js,
+                ${rootPath}/dwr/call/plaincall/CustomerSatisfiedAction.getNosatisDetailData.dwr,
+                ${rootPath}/reports/customerSatisfied/earlyWarningAndMonitor/ShowEWAMDetail.jsp,
+                ${rootPath}/reports/customerSatisfied/earlyWarningAndMonitor/ShowEWAMDetail.jsp*,
+                ${rootPath}/reports/customerSatisfied/earlyWarningAndMonitor/ShowEWAMDetail.js,
+                ${rootPath}/dwr/call/plaincall/CustomerSatisfiedAction.getEWAMDetailData.dwr,
+                ${rootPath}/portalCommon/module/procedure/impExcel/selfDefine/implExcelNoSatisDetail.jsp,
+                ${rootPath}/reports/customerSatisfied/.*,
+				${rootPath}/dwr/engine.js,
+				${rootPath}/dwr/util.js,
+				${rootPath}/dwr/interface/LoginAction.js,
+				${rootPath}/dwr/interface/UserManageAction.js,
+				${rootPath}/dwr/call/plaincall/LoginAction.login.dwr,
+				${rootPath}/dwr/interface/SessionManager.js,
+				${rootPath}/dwr/interface/ZoneAction.js,
+				${rootPath}/dwr/interface/CustomerSatisfiedAction.js,
+				${rootPath}/dwr/call/plaincall/.*,
+				${rootPath}/dwr/interface/MenuAction.js,
+				${rootPath}/dwr/interface/DeptAction.js,
+				${rootPath}/dwr/interface/ZoneAction.js,
+				${rootPath}/dwr/interface/StationAction.js,
+				${rootPath}/dwr/interface/RoleAction.js,
+				
+                ${rootPath}/module/user/login.do,${rootPath}/role.js</param-value>
+        </init-param>
+        <init-param>
+            <!--登录后无需权限控制，都可以访问的URL正则表达式集，这里写JAVA风格的正则表达式,多个以”，“号分隔-->
+            <param-name>loginPublicReg</param-name>
+            <param-value>.*/index.jsp,.*/login.jsp,.*/ShowNotSatisDetail.jsp</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>authFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+
+    
+    <!-- 接口拦截 -->
+    <filter>
+        <filter-name>urlRewrite</filter-name>
+        <filter-class>tydic.meta.web.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>urlRewrite</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>DwrServlet</servlet-name>
+        <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+        <init-param>
+            <param-name>crossDomainSessionSecurity</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <!-- 条件封装 -->
+        <init-param>
+            <param-name>config-meta-termControl</param-name>
+            <param-value>/WEB-INF/meta-termControl-dwr.xml</param-value>
+        </init-param>
+        <!-- 元数据系统管理 -->
+        <init-param>
+            <param-name>config-meta-sys</param-name>
+            <param-value>/WEB-INF/meta-sys-dwr.xml</param-value>
+        </init-param>
+        <!--元数据表类管理-->
+        <init-param>
+            <param-name>config-meta-tbl</param-name>
+            <param-value>/WEB-INF/meta-tbl-dwr.xml</param-value>
+        </init-param>
+        <!-- 元数据维度管理 -->
+        <init-param>
+            <param-name>config-meta-dim</param-name>
+            <param-value>/WEB-INF/meta-dim-dwr.xml</param-value>
+        </init-param>
+        <!-- 决策视窗 -->
+        <init-param>
+            <param-name>config-portal</param-name>
+            <param-value>/WEB-INF/portal-dwr.xml</param-value>
+        </init-param>
+        <!--通用门户-->
+        <init-param>
+            <param-name>config-portalCommon</param-name>
+            <param-value>/WEB-INF/portalCommon-dwr.xml</param-value>
+        </init-param>
+        <!-- 报表设计器 -->
+        <init-param>
+            <param-name>config-report-designer</param-name>
+            <param-value>/WEB-INF/report-designer-dwr.xml</param-value>
+        </init-param>
+        <!-- 报表管理 -->
+        <init-param>
+            <param-name>config-report-manage</param-name>
+            <param-value>/WEB-INF/report-manage-dwr.xml</param-value>
+        </init-param>
+        <!-- home -->
+        <init-param>
+            <param-name>config-home</param-name>
+            <param-value>/WEB-INF/home-manage-dwr.xml</param-value>
+        </init-param>
+        <!-- meta-gdl-dwr.xml -->
+        <init-param>
+            <param-name>config-meta-gdl</param-name>
+            <param-value>/WEB-INF/meta-gdl-dwr.xml</param-value>
+        </init-param>
+        
+        
+    </servlet>
+    <!--权限Servlet -->
+    <servlet>
+        <servlet-name>roleServlet</servlet-name>
+        <servlet-class>tydic.meta.web.RoleButtonServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!--加入CXF支持-->
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>tydic.ws.WebServiceServlet</servlet-class>
+        <!--
+                初始化要发布服务的CXF类，多个以","分割，发布后的路径为http://IP:端口/webService/类名，
+                如:http:localhost:8080/tydic-frame/webService/RoleService
+        -->
+        <init-param>
+            <param-name>serviceCalss</param-name>
+            <param-value>tydic.ws.AuthorityService</param-value>
+        </init-param>
+    </servlet>
+    <!--文件上传Servlet-->
+    <servlet>
+        <servlet-name>fileUpload</servlet-name>
+        <servlet-class>tydic.meta.web.fileUpload.FileUploadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- 报表下载 -->
+    <servlet>
+        <servlet-name>downLoadServlet</servlet-name>
+        <servlet-class>tydic.reports.CommonUtils.DownLoadServlet</servlet-class>
+    </servlet>
+    
+
+    <servlet-mapping>
+        <servlet-name>DwrServlet</servlet-name>
+        <url-pattern>/dwr/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>roleServlet</servlet-name>
+        <url-pattern>/role.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/webService/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fileUpload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+      <servlet-mapping>
+        <servlet-name>downLoadServlet</servlet-name>
+        <url-pattern>/downLoadServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>300</session-timeout>
+    </session-config>
+    <error-page>
+        <error-code>401</error-code>
+        <location>/meta/error/401.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/meta/error/403.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/meta/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/meta/error/500.jsp</location>
+    </error-page>
+    <welcome-file-list>
+        <welcome-file>portal/login.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <!-- 禁用掉不安全的HTTP方法（如PUT、DELETE） -->
+    <security-constraint>     
+    <web-resource-collection>     
+       <url-pattern>/*</url-pattern>     
+       <http-method>PUT</http-method>     
+       <http-method>DELETE</http-method>     
+    </web-resource-collection>     
+       <auth-constraint>     
+       </auth-constraint>     
+    </security-constraint>     
+    <login-config>     
+        <auth-method>BASIC</auth-method>     
+    </login-config>
+    <!--
+   <welcome-file-list>
+       <welcome-file>login.jsp</welcome-file>
+       <welcome-file>index.jsp</welcome-file>
+   </welcome-file-list>
+    -->
+</web-app>

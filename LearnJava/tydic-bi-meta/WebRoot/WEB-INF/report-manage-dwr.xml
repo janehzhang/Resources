@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <init>
+        <creator id="db" class="tydic.frame.dwr.DBCreator"/>
+    </init>
+    <allow>
+    	<!-- 字段分类管理 -->
+        <create creator="db" javascript="ColTypeAction">
+            <param name="class" value="tydic.meta.module.report.issue.ColType.ColTypeAction" />
+        </create> 
+        <create creator="db" javascript="ReportStatisAction">
+            <param name="class" value="tydic.meta.module.report.reportstatis.ReportStatisAction" />
+        </create> 
+        <!-- 发布数据模型 -->
+        <create creator="db" javascript="IssueDataModelAction">
+            <param name="class" value="tydic.meta.module.report.issue.Table.IssueDataModelAction" />
+        </create> 
+        <!-- 审核数据模型 -->
+        <create creator="db" javascript="AuditDataAction">
+            <param name="class" value="tydic.meta.module.report.issue.AuditDataAction" />
+        </create>
+        <!-- 我收藏的报表 -->
+        <create creator="db" javascript="CollectAction">
+            <param name="class" value="tydic.meta.module.report.issue.myCollect.CollectAction" />
+        </create> 
+        <!-- 报表超市 -->
+        <create creator="db" javascript="RepSupermarketAction">
+            <param name="class" value="tydic.meta.module.report.supermarket.RepSupermarketAction" />
+        </create> 
+        <!-- 数据模型下线 -->
+        <create creator="db" javascript="DataOfflineAction">
+            <param name="class" value="tydic.meta.module.report.dataOffline.DataOfflineAction" />
+        </create> 
+        <!-- 报表创建 -->
+        <create creator="db" javascript="ReportBuildAction">
+            <param name="class" value="tydic.meta.module.report.build.ReportBuildAction" />
+        </create>
+        <!--报表创建首页-->
+        <create creator="db" javascript="ReportBuildIndexAction">
+            <param name="class" value="tydic.meta.module.report.reportBuildIndex.ReportBuildIndexAction" />
+        </create>
+        <!-- 报表下线 -->
+        <create creator="db" javascript="ReportOfflineAction">
+            <param name="class" value="tydic.meta.module.report.reportOffline.ReportOfflineAction" />
+        </create> 
+        <!-- 我创建的报表 -->
+        <create creator="db" javascript="MyReportAction">
+            <param name="class" value="tydic.meta.module.report.myReport.MyReportAction" />
+        </create>
+        <!--报表分类-->
+        <create creator="db" javascript="DataCategoryMagAction">
+            <param name="class" value="tydic.meta.module.report.dataCategory.DataCategoryMagAction"/>
+        </create>
+        <create creator="db" javascript="ReportIndexAction">
+            <param name="class" value="tydic.meta.module.gdlRpt.build.ReportIndexAction" />
+        </create>
+    </allow>
+    
+    
+</dwr>

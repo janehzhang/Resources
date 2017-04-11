@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*luozw@ytdic.com 2012 07-24*/
+
+
+
+div, form, img, ul, ol, li, dl, dt, dd {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	border:none;
+}
+
+a{ color:#176ed0; text-decoration: underline; cursor:pointer; }
+a:visited{ color:#176ed0; text-decoration: underline; cursor:pointer; }
+a:hover{ color:#ff6600; text-decoration: underline; cursor:pointer; }
+a:active { color: blue; text-decoration: underline; cursor:pointer; }
+
+ul,li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.blank10{height:10px; line-height:10px;}
+.blank20{height:20px; line-height:20px;}
+.tab_01{
+	margin: 0 auto;
+
+	border-top: #a9b8cd solid 1px;
+	border-left: #a9b8cd solid 1px;
+	text-align: center;
+}
+
+.tab_01 tbody tr td{
+	padding: 3px 4px;
+	border-top: #FFF solid 1px;
+	border-left: #FFF solid 1px;
+	border-right: #a9b8cd solid 1px;
+	border-bottom: #a9b8cd solid 1px;
+}
+
+
+.poster_btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 18px;
+    overflow: hidden;
+    top: 5px;
+    right: 0;
+    padding-bottom: 1px;
+    margin:5px 5px 5px 5px;
+    border-radius: 2px;
+    color: black;
+    border: 1px solid #198EB4;
+    background-color: #D6E8FF;
+    background-position: 0 0 !important;
+}
+.input_text{
+	border-style:none;
+	background-color:#fff;
+	text-align:right;
+	cursor: pointer;
+    color: blue;
+}
+	
+.box li span {  display:none; }
+.box li  img { vertical-align:middle }
+.hidespan {display:none; }
+
+
+ a#tip {position:relative; font-weight:bold;}
+ a#tip:link,a#tip:hover {text-decoration:none;color:#333;display:block}
+ a#tip span {display:none;text-decoration:none; font-weight:normal}
+ a#tip:visited {color:#333;text-decoration:underline;}
+ a#tip:hover #tip_info { width:95%; display:block;border:1px solid #F96;background:#fff;padding:2px;position:absolute;top:30px;left:0;color:#333}

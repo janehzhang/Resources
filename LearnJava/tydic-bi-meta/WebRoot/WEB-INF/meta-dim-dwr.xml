@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <init>
+        <creator id="db" class="tydic.frame.dwr.DBCreator"/>
+        <converter id="nestedMap" class="tydic.frame.dwr.NestedMapConverter"/>
+        <converter id="nestedCollection" class="tydic.frame.dwr.NestedCollectionConverter"/>
+    </init>
+    <allow>
+        <!--容器类转换器-->
+        <convert converter="nestedCollection" match="java.util.Collection"/>
+        <convert converter="nestedMap" match="java.util.Map"/>
+        <!--维度视图维护Action-->
+        <create creator="db" javascript="DimMaintainAction">
+            <param name="class" value="tydic.meta.module.dim.maintain.DimMaintainAction"/>
+        </create>
+        <!--维度归并管理 -->
+        <create creator="db" javascript="DimTypeAction">
+            <param name="class" value="tydic.meta.module.dim.dimtype.DimTypeAction"/>
+        </create>
+        <!--维度代码归并-->
+        <create creator="db" javascript="DimMergeAction">
+            <param name="class" value="tydic.meta.module.dim.merge.DimMergeAction"/>
+        </create>
+        <create creator="db" javascript="DimAuditNewAction">
+            <param name="class" value="tydic.meta.module.dim.audit.DimAuditAction"/>
+        </create>
+        <!--维度映射-->
+        <create creator="db" javascript="DimMappingAction">
+            <param name="class" value="tydic.meta.module.dim.mapping.DimMappingAction"/>
+        </create>
+        <!--接口表查询-->
+        <create creator="db" javascript="DimIntRelAction">
+            <param name="class" value="tydic.meta.module.dim.intRel.DimIntRelAction"/>
+        </create>
+        <!--维度表映射规则管理 -->
+        <create creator="db" javascript="DimIntRelMangerAction">
+            <param name="class" value="tydic.meta.module.dim.intRelManger.DimIntRelMangerAction"/>
+        </create>
+        <!-- 审核编码映射 -->
+        <create creator="db" javascript="MappingAuditAction">
+            <param name="class" value="tydic.meta.module.dim.audit.MappingAuditAction"/>
+        </create>
+        <!-- 查看编码映射审核结果 -->
+        <create creator="db" javascript="ShowMappingAuditAction">
+            <param name="class" value="tydic.meta.module.dim.audit.ShowMappingAuditAction"/>
+        </create>
+        <!-- 维度值查询 -->
+        <create creator="db" javascript="DimCodeSearchAction">
+            <param name="class" value="tydic.meta.module.dim.dimCode.search.DimCodeSearchAction"/>
+        </create>
+    </allow>
+</dwr>

@@ -1,0 +1,133 @@
+@charset "utf-8";
+body {
+}
+div.mid-user {
+	width:80%;
+	float:left;
+	padding-bottom:20px;
+}
+div.user-content {
+	width:99%;
+	height:25px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	margin:0px auto;
+	background:url(img/user-bar.png);
+}
+span.user-name {
+	height:25px;
+	line-height:25px;
+	font-family:"黑体";
+	font-size:14px;
+	color:#ff8000;
+}
+div.user-name-right {
+	float:right;
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	right:250px;
+	top:0px;
+}
+div.user-foot {
+	width:99%;
+	margin:10px auto;
+	display:block;
+	float:left;
+	clear:both;
+}
+.list1 {width:100%;height:200px; display:block;padding:0px;font-size:14px;line-height:24px;border:1px #cfedff solid;margin-left:2px;}
+.tabs1{width:100%;height:34px;border:1px #cfedff solid;border-bottom:0;background:#EBF7FF; margin-left:2px;}
+.tabs1 ul{margin:0;padding:0;}
+.tabs1 li{float:left;padding:0 30px;height:34px;line-height:34px;text-align:center;border-right:1px #ebf7ff solid;cursor:pointer;}
+.tabs1 li.on_user{color:#5299c4;background:#fff;font-weight:bold;}
+.block{display:block;}
+.menuleft1 {
+	border:1px solid #F60;
+	width:100%;
+	margin:0px;
+	position:relative;
+}
+.menuleft1 ul {
+	list-style-type:none;
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.menuleft1 ul.open {
+	height:auto;
+	color:#545454;
+	font-family:"宋体";
+	font-size:12px;
+}
+.menuleft1 ul span.left-bt {
+	display:block;
+	padding-left:15px;
+	font-family:"黑体";
+	color:#545454;
+	font-size:14px;
+	font-weight:bold;
+	background:url(img/left-lbg.png) repeat-x;
+    position:relative;
+}
+span.left-btt {
+	display:block;
+	padding-left:25px;
+	font-family:"黑体";
+	color:#545454;
+	height:25px;
+	line-height:29px;
+	font-size:14px;
+	font-weight:bold;
+	position:relative;
+	background:url(img/user-lbg.png) repeat-x;
+
+}
+.menuleft1 ul span img {
+	float:right;
+	margin:5px;
+	padding:0;
+}
+.menuleft1 ul li {
+	border-bottom:1px dashed #CCC;
+	position:relative;
+	background:#FFFFFF;
+}
+.menuleft1 li a {
+	color:#545454;
+	display:block;
+	padding:0px 5px;
+	text-decoration:none;
+	text-align:left;
+	text-indent:20px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+
+}
+
+.menuleft1 li img {
+	margin-left:10px;
+	position:absolute;
+	left:0px;
+	top:6px;
+}
+.menuleft1 li a:hover {
+	background:url(img/left-lbg-h1.png) repeat-x;
+	color:#3f8aad;
+	font-size:12px;
+	font-weight:bold;
+}
+.menuleft1 li a.current {
+	color:#3f8aad;
+	font-weight:bold;
+	background:url(img/top-bg.png) repeat-x;
+}
+img.user-posi {
+	width:18px;
+	height:18px;
+	position:absolute;
+	left:0px;
+	top:-2px;
+}

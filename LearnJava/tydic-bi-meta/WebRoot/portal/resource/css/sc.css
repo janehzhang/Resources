@@ -1,0 +1,322 @@
+body,html{
+margin:0px;
+}
+table{
+font-size:12px;
+}
+div,html,body{
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-3dlight-color: #d0cecf;
+	scrollbar-face-color: #d0cecf;
+	scrollbar-shadow-color: #969696;
+	scrollbar-darkshadow-color: #eeeef0;
+	scrollbar-track-color: #eae9e5;
+	scrollbar-arrow-color: #4f4a4e;
+}
+.top{
+margin:auto;
+width:980px;
+height:65px;
+background: url(../../../images/blue/sc/top_bg.jpg) repeat-x;
+}
+.searchbg{
+margin:auto;
+width:980px;
+height:62px;
+background:url(../../../images/blue/sc/searchbg.jpg) no-repeat;
+}
+.searchInputBg{
+background:url(../../../images/blue/sc/searchInputbg.jpg) no-repeat;
+}
+
+.searchInputBg input{
+height:16px; 
+width:220px; 
+margin-left:30px;
+border:none #FFF;
+color:#999;
+}
+
+.selectBg{
+height:16px;
+background:url(../../../images/blue/sc/selectBg.gif) no-repeat center;
+color:#000;
+}
+
+
+.tj{
+width:93px;
+height:23px;
+background:url(../../../images/blue/sc/tjbg.jpg) no-repeat;
+color:#FFF;
+}
+
+.tjbg{
+background:url(../../../images/blue/sc/hotBG.jpg) repeat-x;
+color:#069;
+}
+
+.a:visited{
+color:#000;
+text-decoration:none;
+}
+.a:link{
+color:#000;
+text-decoration:none;
+}
+.a:hover{
+color:#0066FF;
+text-decoration:underline;
+}
+
+.blue:visited{
+color:#069;
+text-decoration:none;
+}
+.blue:link{
+color:#069;
+text-decoration:none;
+}
+.blue:hover{
+text-decoration:underline;
+}
+
+.w:visited{
+color:#000;
+text-decoration:none;
+}
+.w:link{
+color:#000;
+text-decoration:none;
+}
+.w:hover{
+color:#FFF;
+}
+
+.content{
+width:980px;
+margin:auto;
+}
+.contentLeft{
+float:left;
+width:240px;
+}
+.contentMid{
+float:left;
+width:500px;
+margin:0px 10px 0px 10px;
+}
+.contentRight{
+float:left;
+width:220px;
+}
+
+.box{
+background:#F7FBFF;
+}
+.boxTopLeft{
+background:url(../../../images/blue/sc/TopLeft.jpg) no-repeat;
+}
+.boxTopMid{
+background:url(../../../images/blue/sc/top.jpg) repeat-x;
+}
+.boxTopRight{
+background:url(../../../images/blue/sc/TopRight.jpg) no-repeat;
+}
+.boxLeft{
+background:url(../../../images/blue/sc/left.jpg) repeat-y;
+}
+.boxTitle{
+background:url(../../../images/blue/sc/titlebg.jpg) repeat-x;
+color:#069;
+}
+.boxRight{
+background:url(../../../images/blue/sc/right.jpg) repeat-y;
+}
+.boxBottomLeft{
+background:url(../../../images/blue/sc/bottomLeft.jpg) no-repeat;
+}
+.boxBottomMid{
+background:url(../../../images/blue/sc/bottom.jpg) repeat-x;
+}
+.boxBottomRight{
+background:url(../../../images/blue/sc/bottomRight.jpg) no-repeat;
+}
+.xz-side2{
+border-left: 1px solid #c6d9f2;
+border-right: 1px solid #c6d9f2;
+}
+
+.sx-tab-bom-left{
+	background:url(../../../images/blue/sc/tab-bom-left.gif) no-repeat left top;
+	height: 6px;
+	width: 6px;
+}
+.sx-tab-bom-bg{
+	background:url(../../../images/blue/sc/tab-bom-bg.gif) repeat-x left top;
+	height: 6px;
+	
+}
+
+.sx-tab-bom-right{
+	background:url(../../../images/blue/sc/tab-bom-right.gif) no-repeat left top;
+	height: 6px;
+	width: 6px;
+}
+.xz-dianping-left{
+	background:url(../../../images/blue/sc/xz-dianping.jpg) no-repeat left top;
+	width:20px;
+
+}
+.xz-dianping-bg{
+	background:url(../../../images/blue/sc/xz-dianping.jpg) repeat-x 0 -50px;
+}
+.xz-dianping-right{
+	background:url(../../../images/blue/sc/xz-dianping.jpg) repeat-x right -100px;
+	width:20px;
+}
+.xz-dianping-ico{
+	background:url(../../../images/blue/sc/xz-dianping.jpg) repeat-x  0 -150px;
+	width:35px;
+		height: 45px;
+}
+
+
+.number{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 0;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+	
+}
+
+.number-50{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -50px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-100{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -100px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-150{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -150px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-200{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -200px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-250{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -250px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-300{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -300px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-350{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -350px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+.number-400{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -400px;
+	width: 17px;
+	height: 15px;
+	margin: 0 5px;
+}
+.number-500{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -500px;
+	width: 3px;
+	height: 3px;
+	margin: 0 5px;
+	
+}
+.number-550{
+	background: url(../../../images/blue/sc/number.gif) no-repeat 0 -550px;
+	width: 11px;
+	height: 12px;
+	margin: 0 5px;
+}
+
+.menhu-left-img{
+	background: url(../../../images/blue/sc/menhu-left-img.jpg) no-repeat top left;
+	width: 223px;
+	height: 445px;
+	
+}
+.menhu-left-bg{
+	background: url(../../../images/blue/sc/menhu-left-bg.jpg) repeat-y  top left;
+	width: 223px;
+}
+.menhu-right-line-bg{
+	background: url(../../../images/blue/sc/menhu-right-line-bg.jpg) repeat-x  top left;
+	height: 4px;
+}
+.menfu-title-green{
+	background: url(../../../images/blue/sc/menfu-title-green.gif) no-repeat top left;
+	height: 25px;
+	text-indent: 20px;
+	font-size: 14px;
+	font-weight: bolder;
+	color: #99cc33;
+	line-height: 25px;
+}
+.menfu-title-gold{
+	background: url(../../../images/blue/sc/menfu-title-gold.gif) no-repeat top left;
+	height: 25px;
+	text-indent: 20px;
+	font-size: 14px;
+	font-weight: bolder;
+	color: #ff9900;
+	line-height: 25px;
+}
+.menfu-title-gold1{
+	background: url(../../../images/blue/sc/menfu-title-gold1.gif) no-repeat top left;
+	height: 25px;
+	text-indent: 20px;
+	font-size: 14px;
+	font-weight: bolder;
+	color: #ff9900;
+	line-height: 25px;
+}
+.gonggao-top{
+	background: url(../../../images/blue/sc/gonggao-top.gif) no-repeat top left;
+	width:748px;
+	
+}
+.gonggao-bg{
+	background: url(../../../images/blue/sc/gonggao-bg.gif) repeat-y top left;
+	width:748px;
+}
+
+.wd100{
+	width: 150px;
+}
+.sx-img-450{
+	background: url(../../../images/yellow/sx/sx-img.gif) no-repeat 0px -450px;
+	width: 12px;
+	height: 15px;
+	margin: 0 5px;
+	vertical-align: middle;
+}

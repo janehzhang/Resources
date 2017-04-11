@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<title>报表设计器</title>
+ 
+
+<style type="text/css"> 
+body{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+		border-color:#808080 #FFFFFF #FFFFFF #808080; 
+	border-style:none; 
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px;
+	font-family: "Arial", "宋体";
+	font-size: 12px;
+	SCROLLBAR-FACE-COLOR: menu; 
+    SCROLLBAR-HIGHLIGHT-COLOR: menu; 
+    SCROLLBAR-SHADOW-COLOR: #999999; 
+    SCROLLBAR-3DLIGHT-COLOR: #777777; 
+    SCROLLBAR-ARROW-COLOR: #ffffff;  
+    SCROLLBAR-TRACK-COLOR: #dddddd; 
+}
+</style>
+<link rel="stylesheet" href="js/dhtmlx/dhtmlx.css" type="text/css"></link>
+ 
+<script type="text/javascript" src="js/dhtmlx/dhtmlx.js"></script> 
+
+</head>
+<body>
+</body>
+</html>
+<script type="text/javascript">
+	var cp = new dhtmlXColorPicker(null,null);
+   	cp.setImagePath("js/dhtmlx/imgs/");
+    cp.init();
+	if(window.dialogArguments)cp.setColor(window.dialogArguments);
+	cp.setOnSelectHandler(function(color){
+		window.returnValue=color.toUpperCase();
+		cp.close();
+		cp=null;
+		window.close();
+	});
+	cp.setOnCancelHandler(function()
+	{
+		window.returnValue=null;
+		window.close();
+	});
+
+</script>

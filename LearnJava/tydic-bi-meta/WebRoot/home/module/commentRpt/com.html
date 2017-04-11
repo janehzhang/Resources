@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body, div, a, ul, li, img, span, p {
+    margin:0;
+    padding:0;
+    border:none;
+    list-style:none;
+    text-decoration:none;
+    background:none;
+}
+body {
+    font:12px/1.5 tahoma, arial, "宋体", sans-serif;
+    /*background:url(img/0007.png);*/
+}
+a {
+    color:#0063dc;
+}
+a:hover {
+    color:#ff6600;
+}
+div.both {
+    max-width:100%;
+    min-width:1180px;
+    margin:0 auto;
+}
+div.header {
+    width:100%;
+    height:25px;
+    margin:0 auto;
+    position:relative;
+}
+div.top-1 {
+    width:100%;
+    height:25px;
+    background:url(../../resource/images/orange/top-bg.png) repeat-x;
+    display:block;
+}
+div.tip {
+    width:320px;
+    height:30px;
+    position:absolute;
+    right:20px;
+    top:0px;
+}
+span.hyc {
+    font-size:12px;
+    font-family:"宋体";
+    height:25px;
+    line-height:25px;
+    margin-left:10px;
+    margin-right:20px;
+    float:left;
+    padding-left:250px;
+    color:#666666;
+    display:block;
+}
+span.comtotal{
+    float:left;
+    margin-left: 30px;
+    margin-top:4px;
+    color:#545454;
+}
+span.comtotal span{
+    float:left;
+    display:block;
+}
+span.current-user{
+    color:blue;
+    font-weight:bold;
+}
+div.tip a{
+    font-size:12px;
+    font-family:"宋体";
+    line-height:25px;
+    margin-right:10px;
+    padding-left:20px;
+    padding-bottom:1px;
+}
+a.tips0 {
+    background:url(../../resource/images/ownMenus.png) no-repeat;
+    background-size:13px;
+}
+a.tips1 {
+    background:url(../../resource/images/orange/aboutus.png) no-repeat;
+    background-size:13px;
+}
+a.tips2 {
+    background:url(../../resource/images/orange/faq.png) no-repeat;
+    background-size:13px;
+}
+a.tips3 {
+    background:url(../../resource/images/orange/help.png) no-repeat;
+    background-size:13px;
+}
+a.tips4 {
+    background:url(../../resource/images/logout.png) no-repeat;
+    background-size:13px;
+}
+div.content {
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+}
+div.rpt-content{
+    width:100%;
+    height:100%;
+    position:relative;
+    float: left;
+    border: 1px solid red;
+}
+div.openCommentBtn{
+    width:10px;
+    height:500px;
+    background-color:red;
+    position: absolute;
+    right:280px;
+    top:0px;
+    cursor: pointer;
+    z-index:9;
+}
+div.openCommentBtn img{
+    width:10px;
+    height:10px;
+}
+div.rpt-comment{
+    width:20%;
+    position:absolute;
+    float: left;
+    height:100%;
+    right:0;
+    top:0;
+}
+div.commentdiv{
+    border:1px solid red;
+    padding-bottom:100px;
+}
+span.comtitle{
+    display:block;
+    padding-left:15px;
+    font-family:"黑体";
+    color:#545454;
+    font-size:14px;
+    font-weight:bold;
+    background:url(../../resource/images/orange/left-lbg.png) repeat-x;
+}
+ul.infoul{}
+span.cominfo{
+    display:block;
+    padding-left:10px;
+    color:#545454;
+    font-size:13px;
+    font-weight:bold;
+    background:url(../../resource/images/orange/left-lbg.png) repeat-x;
+}
+span.comtext{	width:230px;
+    margin:0px auto; display:block;}
+textarea.zhc{
+
+}
+textarea.huise{
+}
+span.comtext textarea{
+    width:230px;
+    height:100px;
+}
+span.sub_hf textarea{
+    width:200px;
+    height:70px;
+    max-width: 200px;
+    max-height: 70px;
+}
+span.start {
+    width:100%;
+    display:block;
+}
+a.pln {
+    height:16px;
+    width:16px;
+    display:block;
+    background:url(img/quote.png) no-repeat;
+}
+span.com_grade{}
+span.com_grade span{ display:block; float:left;}
+ul li.info{
+    padding:10px;
+    border-bottom:1px dashed #aaaaaa;
+}
+ul li.info:hover{
+    background-color:#FAFAFA;
+}
+
+span.info_user{ color:#175099; font-size:12px; font-family:"宋体";}
+span.info_content{ color:#3f3f3f; font-size:12px; font-family:"宋体"; text-indent:10px;}
+span.info_time{ display:block;color:#aaaaaa; width:60%; float:left;}
+span.info_a_hf{ display:block; width:40%; text-align:right; float:left; color:#175099; font-size:12px;}
+div.subdiv{
+    margin-top:5px;
+
+}
+
+ul.subul{
+
+}
+ul li.subinfo{background:#ebeff5; padding:2px; margin:2px 0px 0px 0px;}
+span.sub_user{color:#175099; font-size:12px; font-family:"宋体";}
+span.sub_content{color:#3f3f3f; font-size:12px; font-family:"宋体"; text-indent:10px;}
+span.sub_time{display:block;color:#aaaaaa; width:60%;}
+div.huifuqu{
+    min-height:25px;
+    background:#red;
+    margin-top:5PX;
+    position:relative;
+}
+
+div.huif{
+    right:5px;
+    top:0px;
+    position: absolute;
+    min-height:25px;
+    max-height:100px;
+    width:190px;
+    height:auto;
+}
+span.sub_hf_btn{
+    height:25px;
+    display:block;
+}
+span.sub_hf{
+    display:none;
+    height:100px;
+}
+a.xing1 { background: url(img/xing1.png) no-repeat; width:12px; height:12px; display:block; float:left; margin-top:2px;_margin-top:1px;}
+a.xing2 { background: url(img/xing2.png) no-repeat; width:12px; height:12px; display:block; float:left; margin-top:2px;_margin-top:1px;}
+a.xing3 { background: url(img/xing3.png) no-repeat; width:12px; height:12px; display:block; float:left; margin-top:2px;_margin-top:1px;}
+</style>
+</head>
+
+<body style='width:100%;height:100%;'>
+<div class="both">
+    <div class="header" id="headerDIV">
+        <div class="top-1">
+            <span class="hyc"><span id="current-user" class="current-user">XXX</span>&nbsp;您好，欢迎来到四川电信自助取数平台！</span>
+            <span class="comtotal" id="comtotalSPAN">
+                <span>共187人评论，总体评分</span>
+                <span><a href="#" class="xing1"></a><a href="#" class="xing1"></a><a href="#" class="xing1"></a><a href="#" class="xing2"></a><a href="#" class="xing3"></a></span>
+            </span>
+            <div style="clear:both;"></div>
+            <div class="tip">
+                <a class="tips0" href="javascript:void(0);" onclick="linkRptIndex();">首页</a>
+                <a class="tips1" href="javascript:void(0);" onclick="linkContactUs();">联系我们</a>
+                <a class="tips2" href="javascript:void(0);" onclick="linkFAQ();">FAQ</a>
+                <a class="tips3" href="javascript:void(0);" onclick="linkHelp();">帮助</a>
+                <a class="tips4" href="javascript:void(0);" onclick="linkLogout();">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="rpt-content" id="rpt-content">
+            <iframe id="openRptFrame" marginwidth="0"
+                    marginheight="0" frameborder="0" scrolling="auto"></iframe>
+        </div>
+        <div class="openCommentBtn" id="openBtn">
+            <img src="../../resource/images/edit_add.png" onclick="openOrCloseComment()" title="展开/收起 评论区" alt=""></div>
+        <div class="rpt-comment" id="rpt-comment">
+            <div class="commentdiv">
+                <span class="cominfo">评论区</span>
+                <span class="comtext" id="com_span">
+                    <textarea class="zhc" id="pl_txt"></textarea>
+                    <span class="start">
+                    <span class="com_grade"><span>评分:</span><span><a href="#" class="xing1"></a><a href="#" class="xing2"></a><a href="#" class="xing2"></a><a href="#" class="xing2"></a><a href="#" class="xing3"></a></span></span>
+                    <input type="button" onclick="submitComment()" value="评价"></span>
+                    <div style="clear:both;"></div>
+                </span>
+                <ul class="infoul" id="commentUL">
+                    <li class="info">
+                        <span class="info_user">谭洪涛：</span>
+                        <span class="info_content">非常感谢！这张报表对我部非常有用！非常感谢！这张报表对我部非常有用！</span>
+                        <div style="width:100%; margin-top:5px;">
+                            <span class="info_time">2012-03-03 12:12:21</span>
+                            <span class="info_a_hf"><a class="pln" href="javascript:void(0);" id="hf_a_0" onclick="openOrCloseSubComment(0)" title="查看回复"></a></span>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div class="subdiv" id="subDIV0">
+                            <ul class="subul" id="replyUL0">
+                                <li class="subinfo">
+                                    <span class="sub_user">XX：</span>
+                                    <span class="sub_content">asdfasdf</span>
+                                    <span class="sub_time">2012-03-03 12:12:21</span>
+                                </li>
+                                <li class="subinfo">
+                                    <span class="sub_user">XX：</span>
+                                    <span class="sub_content">asdfasdf</span>
+                                    <span class="sub_time">2012-03-03 12:12:21</span>
+                                </li>
+                                <li class="subinfo">
+                                    <span class="sub_user">XX：</span>
+                                    <span class="sub_content">asdfasdf</span>
+                                    <span class="sub_time">2012-03-03 12:12:21</span>
+                                </li>
+                            </ul>
+                            <div class="huifuqu" id="huifuqu_div0"><div id="hf_div" class="huif">
+    <span class="sub_hf_btn" id="hf_btn_span">
+        <input type="button" value="我也说一句" onclick="openOrCloseSubCommentText()"></span>
+    <span class="sub_hf" id="hf_txt_span">
+        <textarea class="huise" id="hf_txt"></textarea>
+        <input type="button" value="回复" onclick="submitSubComment()"/>
+        <input type="button" value="取消" onclick="openOrCloseSubCommentText()"/> </span>
+                            </div></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

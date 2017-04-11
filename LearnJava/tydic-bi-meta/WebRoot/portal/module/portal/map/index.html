@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+	<head>
+		<title>map</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script>
+		
+		//界面加载与SWF加载的同步
+		var isReady = false;
+		function JsReady(){return isReady;}
+	
+		
+		//取得flash对象
+		function getFlashMovieObject(movieName)
+		{
+			if(window.document[movieName])
+			{
+				return window.document[movieName];
+			}else if(navigator.appName.indexOf("Microsoft")==-1)
+			{
+				if(document.embeds && document.embeds[movieName])
+				return document.embeds[movieName];
+			}
+			else
+			{
+				return document.getElementById(movieName);
+			}
+		}
+			
+		//[地区,颜色,是否下转]
+		var Data1 = [
+			['Area_028','0x0068B0',true],
+			['Area_0812','0x0068B0',true],
+			['Area_0813','0x0068B0',true],
+			['Area_0816','0x0068B0',true],
+			['Area_0817','0x0068B0',true],
+			['Area_0818','0x0068B0',true],
+			['Area_0825','0x0068B0',true],
+			['Area_0826','0x0068B0',true],
+			['Area_0827','0x0068B0',true],
+			['Area_0830','0x0068B0',true],
+			['Area_0831','0xFFFFFF',true],
+			['Area_0832','0xDDDDDD',true],
+			['Area_0833','0x0068B0',true],
+			['Area_0834','0x0068B0',true],
+			['Area_0835','0x0068B0',true],
+			['Area_0836','0x0068B0',true],
+			['Area_0837','0x0068B0',true],
+			['Area_0838','0x0068B0',true],
+			['Area_0839','0x0068B0',true],
+			['Area_0840','0x0068B0',true],
+			['Area_0841','0x0068B0',true]
+		];
+			
+		//地图flash方法与js方法进行绑定，使操作js方法可以调用flash方法
+		function setData()
+		{
+			//alert(0);
+			var rtn = getFlashMovieObject("myFlash").setMap(Data1);
+			//alert(rtn);
+		}
+		
+		function gotoArea(area,isOnly){
+			getFlashMovieObject("myFlash").gotoArea(area,isOnly);
+		}
+		
+		//单击地图调用的js方法
+		function callJs(v)
+		{
+			alert(v);
+		}
+		
+
+		window.onload = function ()
+		{
+			isReady = true;
+		}
+        </script>
+        
+	</head>
+	<body>
+	<table width="240" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td height="210">
+		
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="240" height="210" id="myFlash">
+			<param name="allowScriptAccess" value="always" />
+			<param name="movie" value="map.swf" />
+			<param name="quality" value="high" />
+			<embed src="map.swf" quality="high" width="420" height="300" name="myFlash" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object>
+		
+		</td>
+	  </tr>
+	</table>
+
+
+     </body>
+</html>
+

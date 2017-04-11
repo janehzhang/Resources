@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+	<head>
+		<title>map</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script>
+		
+		//界面加载与SWF加载的同步
+		var isReady = false;
+		function JsReady(){return isReady;}
+	
+		
+		//取得flash对象
+		function getFlashMovieObject(movieName)
+		{
+			if(window.document[movieName])
+			{
+				return window.document[movieName];
+			}else if(navigator.appName.indexOf("Microsoft")==-1)
+			{
+				if(document.embeds && document.embeds[movieName])
+				return document.embeds[movieName];
+			}
+			else
+			{
+				return document.getElementById(movieName);
+			}
+		}
+			
+		//[地区,是否负增长,数据,下转（空为不下转）]
+		var Data1 = [
+			['Area_200','0x0068B0','','A_200'],
+			['Area_755','0x0068B0','天翼手机:-2000','A_755'],
+			['Area_769','0x0068B0','天翼手机:120','A_769'],
+			['Area_757','0x0068B0','天翼手机:120','A_757'],
+			['Area_754','0x0068B0','天翼手机:120','A_754'],
+			['Area_760','0x0068B0','天翼手机:120','A_760'],
+			['Area_752','0x0068B0','天翼手机:-120','A_752'],
+			['Area_750','0x0068B0','天翼手机:120','A_750'],
+			['Area_759','0x0068B0','天翼手机净增:120','A_759'],
+			['Area_663','0x0068B0','天翼手机净增:120','A_663'],
+			['Area_756','0x0068B0','天翼手机净增:120','A_756'],
+			['Area_668','0x0068B0','天翼手机净增:-120','A_668'],
+			['Area_758','0x0068B0','天翼手机净增:120','A_758'],
+			['Area_753','0x0068B0','天翼手机净增:120','A_753'],
+			['Area_763','0x0068B0','天翼手机净增:120','A_763'],
+			['Area_768','0x0068B0','天翼手机净增:120','A_768'],
+			['Area_660','0x0068B0','天翼手机净增:120','A_660'],
+			['Area_762','0x0068B0','天翼手机净增:120','A_762'],
+			['Area_751','0x0068B0','天翼手机净增:120','A_751'],
+			['Area_662','0x0068B0','天翼手机净增:120','A_662'],
+			['Area_766','0x0068B0','天翼手机净增:120','A_766']
+		];
+			
+		//地图flash方法与js方法进行绑定，使操作js方法可以调用flash方法
+		function setData(val)
+		{
+			alert(0);
+			getFlashMovieObject("myFlash").setMap(Data1);
+		}
+		
+		//单击地图调用的js方法
+		function callJs(v)
+		{
+			alert(v);
+		}
+		
+
+	window.onload = function ()
+		{
+			isReady = true;
+			setData();
+		}
+        </script>
+        
+	</head>
+	<body>
+	<table width="240" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td height="210">
+		
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="240" height="210" id="myFlash">
+			<param name="allowScriptAccess" value="always" />
+			<param name="movie" value="map.swf" />
+			<param name="quality" value="high" />
+			<embed src="map.swf" quality="high" width="420" height="300" name="myFlash" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object>
+		
+		</td>
+	  </tr>
+	</table>
+
+
+     </body>
+</html>
+

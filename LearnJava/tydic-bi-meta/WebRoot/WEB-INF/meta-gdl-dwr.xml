@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <init>
+        <creator id="db" class="tydic.frame.dwr.DBCreator"/>
+        <converter id="nestedMap" class="tydic.frame.dwr.NestedMapConverter"/>
+        <converter id="nestedCollection" class="tydic.frame.dwr.NestedCollectionConverter"/>
+    </init>
+    <allow>
+        <!--容器类转换器-->
+        <convert converter="nestedCollection" match="java.util.Collection"/>
+        <convert converter="nestedMap" match="java.util.Map"/>
+        <create creator="db" javascript="GdlAction">
+            <param name="class" value="tydic.meta.module.gdl.GdlAction"/>
+        </create>
+        <!--指标分类管理Action-->
+        <create creator="db" javascript="_GdlGroupAction">
+            <param name="class" value="tydic.meta.module.gdl.group._GdlGroupAction"/>
+        </create>
+        <create creator="db" javascript="GdlGroupAction">
+            <param name="class" value="tydic.meta.module.gdl.group.GdlGroupAction"/>
+        </create>
+        <!--复合指标管理Action-->
+        <create creator="db" javascript="GdlCompositeMagAction">
+            <param name="class" value="tydic.meta.module.gdl.composite.GdlCompositeMagAction"/>
+        </create>
+        <!--计算指标管理Action-->
+        <create creator="db" javascript="GdlCalcAction">
+            <param name="class" value="tydic.meta.module.gdl.calc.GdlCalcAction"/>
+        </create>
+        <!--指标超市Action-->
+        <create creator="db" javascript="GdlSupermarketAction">
+            <param name="class" value="tydic.meta.module.gdl.supermarket.GdlSupermarketAction"/>
+        </create>
+
+         <!--指标审核Action-->
+        <create creator="db" javascript="GdlExamineAction">
+            <param name="class" value="tydic.meta.module.gdl.examine.GdlExamineAction"/>
+        </create>
+
+        <!--基础指标Action-->
+        <create creator="db" javascript="GdlBasicMagAction">
+            <param name="class" value="tydic.meta.module.gdl.basic.GdlBasicMagAction"/>
+        </create>
+        <!--指标与表类关系Action-->
+        <create creator="db" javascript="GdlRelAction">
+            <param name="class" value="tydic.meta.module.gdl.rel.GdlRelAction"/>
+        </create>
+        <!--指标与指标关系Action-->
+        <create creator="db" javascript="GdlRelGdlAction">
+            <param name="class" value="tydic.meta.module.gdl.rel.GdlRelGdlAction"/>
+        </create>
+    </allow>
+</dwr>

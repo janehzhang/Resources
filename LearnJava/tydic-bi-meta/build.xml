@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<project name="tydic-bi-meta"   default="上传代码"   
+	                basedir="D:\tomcat7.0\webapps\tydic-bi-meta">
+	<!--本机的 -->
+	<property name="local.class"      value="${basedir}/WEB-INF/classes" />
+	<target name="编译Java代码">
+		<echo message="开始把Java文件编译Class文件" />
+		<echo message="编译成功！" />
+	</target>
+	<target name="上传代码"  depends="编译Java代码">
+		<echo message="upload file to server" />
+		<ftp server="132.121.165.45" action="put" userid="Administrator" password="kehufwfx2012" 
+			remotedir="/WEB-INF/classes" 
+			passive="yes" verbose="yes" retriesAllowed="10">
+		      <fileset dir="${local.class}">
+		      	<include name="**/*.class"/>
+		      	<exclude name="**/*.properties" />
+		      	<exclude name="**/*.xml" />
+			  </fileset>
+		</ftp>
+		<echo message="upload 成功！" />
+	</target>
+</project>
+
+

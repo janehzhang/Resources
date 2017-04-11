@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>
+			formTest
+		</title>
+	</head>
+	<body>
+		<form  action="table.html" method="get">
+			<table width="750" align="center" border="2">
+			
+				<tr>
+					<td colspan="2"  align="center">用户注册</td>
+				</tr>
+				
+				<tr>
+					<td>用户名:</td>
+					<td>
+						<input type="text" name="username" size="50" maxlength="10">			<!--text型输入框,name就是传给服务器的名字-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td>密码:</td>
+					<td>
+						<input type="password" name="password1" size="50" maxlength="20">	
+					</td>	
+				</tr>
+				
+				<tr>
+					<td>密码确认:</td>
+					<td>
+						<input type="password" name="password2" size="50" maxlength="20">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>性别:</td>
+					<td>
+						<input type="radio" name="gender" value="male" >男	<!--radio典型用法是name相同value不同-->
+						<input type="radio" name="gender" value="female" >女
+					</td>
+				</tr>
+				
+				<tr>
+					<td>你的兴趣:</td>
+					<td>
+						<input type="checkbox" name="interest" value="c" checked>C		<!--checked 表示默认给你选择-->
+						<input type="checkbox" name="interest" value="c++" >C++
+						<input type="checkbox" name="interest" value="java" >java
+						<input type="checkbox" name="interest" value="javascript" >javascript
+						<br>																<!--换行-->
+						<input type="checkbox" name="interest" value="python" >python
+						<input type="checkbox" name="interest" value="ruby" >ruby
+						<input type="checkbox" name="interest" value="c#" >c#
+						<input type="checkbox" name="interest" value="php" >php
+					</td>
+				</tr>
+				
+				<!--必须选中就是jsp-->
+				<input type="hidden" name="interset" value="jsp">		<!--隐藏域，不显示在页面中，用作向下一个页面传输已知信息或表单的附加信息-->
+				
+				<tr>
+					<td>你感兴趣的:</td>
+					<td>
+						<select name="interest2" size="5" multiple>		<!-- size=5表示显示五个选项，multiple按着ctrl可多选-->
+							<option value="c" selected>C</option>		<!-- selected表示默认选择的-->
+							<option value="c++">C++</option>
+							<option value="java">java</option>
+							<option value="python">python</otion>
+							<option value="ruby">ruby</option>
+							<option value="c#">c#</option>
+							<option value="php">php</option>
+							<option value="javascript">javascript</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>你来自:</td>
+					<td>
+						<select name="city">							<!--不加size就只有一个选项-->
+							<option value="0" selected>请选择<option>
+							<option value="1" >Guangzhou<option>
+							<option value="2">Shenzhen<option>
+							<option value="3">Kunming<option>
+							<option value="11">Beijing<option>
+							<option value="12">Shanghai<option>
+							<option value="13">Hangzhou<option>
+							<option value="21">Wuhan<option>
+							<option value="22">Hongkong<option>
+							<option value="23">Taibei<option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>自我介绍</td>
+					<td>
+						<textarea rows="6"  cols="90" name="intro" wrap="hard"></textarea>		<!--<textarea></textarea>之间不要加内容.,,rows和clos指定文本大小-->
+					</td>
+				</tr>
+				
+				<tr>
+					<td>确定</td>
+					<td>
+						<input type="submit" value="提交">
+						<input type="reset" value="重置">
+						<input type="button" value="OK">
+					</td>
+				</tr>
+				
+				
+						
+			</table>
+		</form>
+	</body>
+</html>

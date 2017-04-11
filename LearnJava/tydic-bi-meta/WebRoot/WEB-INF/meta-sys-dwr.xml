@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <init>
+        <creator id="db" class="tydic.frame.dwr.DBCreator"/>
+        <converter id="nestedMap" class="tydic.frame.dwr.NestedMapConverter"/>
+        <converter id="nestedCollection" class="tydic.frame.dwr.NestedCollectionConverter"/>
+    </init>
+    <allow>
+        <create creator="db" javascript="MenuAction">
+            <param name="class" value="tydic.meta.module.mag.menu.MenuAction"/>
+        </create>
+        <create creator="db" javascript="RoleAction">
+            <param name="class" value="tydic.meta.module.mag.role.RoleAction"/>
+        </create>
+        <create creator="db" javascript="LoginAction">
+            <param name="class" value="tydic.meta.module.mag.login.LoginAction"/>
+        </create>
+        <create creator="db" javascript="UserAction">
+            <param name="class" value="tydic.meta.module.mag.user.UserAction"/>
+        </create>
+        <create creator="db" javascript="MenuUserAction">
+            <param name="class" value="tydic.meta.module.mag.menu.MenuUserAction"/>
+        </create>
+        <create creator="db" javascript="MenuRoleAction">
+            <param name="class" value="tydic.meta.module.mag.menu.MenuRoleAction"/>
+        </create>
+        <create creator="db" javascript="DeptAction">
+            <param name="class" value="tydic.meta.module.mag.dept.DeptAction"/>
+        </create>
+        <create creator="db" javascript="ZoneAction">
+            <param name="class" value="tydic.meta.module.mag.zone.ZoneAction"/>
+        </create>
+        <create creator="db" javascript="ReasonAction">
+            <param name="class" value="tydic.meta.module.mag.reason.ReasonAction"/>
+        </create>
+        <create creator="db" javascript="ProdTypeAction">
+            <param name="class" value="tydic.reports.query.ProdTypeAction"/>
+        </create>
+        <create creator="db" javascript="CmplBusiTypeAction">
+            <param name="class" value="tydic.reports.query.CmplBusiTypeAction"/>
+        </create>
+         <create creator="db" javascript="CmplDeptAction">
+            <param name="class" value="tydic.meta.module.mag.cmplDept.CmplDeptAction"/>
+        </create>
+        <!-- 渠道类型树 -->
+         <create creator="db" javascript="ChannelTypeAction">
+            <param name="class" value="tydic.reports.query.ChannelTypeAction"/>
+        </create>
+        <create creator="db" javascript="StationAction">
+            <param name="class" value="tydic.meta.module.mag.station.StationAction"/>
+        </create>
+        <create creator="db" javascript="MenuVisitLogAction">
+            <param name="class" value="tydic.meta.module.mag.menu.MenuVisitLogAction"/>
+        </create>
+        <create creator="db" javascript="LoginLogAction">
+            <param name="class" value="tydic.meta.module.mag.login.LoginLogAction"/>
+        </create>
+        <create creator="db" javascript="GroupAction">
+            <param name="class" value="tydic.meta.module.mag.group.GroupAction"/>
+        </create>
+        <create creator="db" javascript="CodeAction">
+            <param name="class" value="tydic.meta.sys.code.CodeAction"/>
+        </create>
+        <!--收藏夹-->
+        <create creator="db" javascript="FavoriteAction">
+            <param name="class" value="tydic.meta.module.mag.favorite.FavoriteAction"/>
+        </create>
+        <!--日志-->
+        <create creator="db" javascript="LoginReportAction">
+            <param name="class" value="tydic.meta.module.mag.login.LoginReportAction"/>
+        </create>
+        <create creator="new" javascript="SessionManager">
+            <param name="class" value="tydic.meta.web.session.SessionManager"/>
+        </create>
+        <create creator="db" javascript="NoticeAction">
+            <param name="class" value="tydic.meta.module.mag.notice.NoticeAction"/>
+        </create>
+        <!--组件-->
+        <create creator="db" javascript="ComponentAction">
+            <param name="class" value="tydic.meta.component.ComponentAction"/>
+        </create>
+        <create creator="db" javascript="CmpInitAction">
+            <param name="class" value="tydic.meta.component.CmpInitAction"/>
+        </create>
+
+        <!--容器类转换器-->
+        <convert converter="nestedCollection" match="java.util.Collection"/>
+        <convert converter="nestedMap" match="java.util.Map"/>
+        <!--bean类转换器-->
+        <convert converter="bean" match="tydic.meta.common.Page"/>
+        <convert converter="bean" match="tydic.meta.common.OprResult"/>
+        <!--枚举转换器-->
+        <convert converter="enum" match="tydic.meta.common.OprResult$OprResultType"/>
+        <convert converter="enum" match="tydic.meta.module.mag.login.ILoginType$LoginResult"/>
+
+    </allow>
+</dwr>

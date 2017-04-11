@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://www.getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <init>
+        <creator id="db" class="tydic.frame.dwr.DBCreator"/>
+    </init>
+    <allow>
+        <!-- 决策视窗 -->
+        <create creator="db" javascript="PortalCommonCtrlr">
+            <param name="class" value="tydic.portalCommon.PortalCtrlr"/>
+        </create>
+        <create creator="db" javascript="AuditAction">
+            <param name="class" value="tydic.portalCommon.audit.AuditAction"/>
+        </create>
+         <!--查询批示记录 -->
+        <create creator="db" javascript="PortalInstructionAction">
+            <param name="class" value="tydic.portalCommon.PortalInstructionAction"/>
+        </create>
+        <!-- 首页配置 -->
+        <create creator="db" javascript="ReportConfigAction">
+            <param name="class" value="tydic.portalCommon.initConfig.ReportConfigAction"/>
+        </create>
+        <!--宽带装移机端到端全流程各环节管控  -->
+        <create creator="db" javascript="StepInstallAction">
+            <param name="class" value="tydic.portalCommon.serviceControl.StepInstallAction"/>
+        </create>
+        <!--宽带故障申告全流程各环节管控  -->
+        <create creator="db" javascript="StepFaultAction">
+            <param name="class" value="tydic.portalCommon.serviceControl.StepFaultAction"/>
+        </create>
+        <!-- 核心环节 -->
+        <create creator="db" javascript="CustomerCoreScoreAction">
+            <param name="class" value="tydic.portalCommon.coreLink.CustomerCoreScoreAction"/>
+        </create>
+        <!-- 核心环节详细 -->
+        <create creator="db" javascript="CustomerCoreScoreDetailAction">
+            <param name="class" value="tydic.portalCommon.coreLink.CustomerCoreScoreDetailAction"/>
+        </create>
+        <!--定制化月报表-->
+        <create creator="db" javascript="ReportsMonAction">
+            <param name="class" value="tydic.reports.ReportsMonAction"/>
+        </create>
+        <create creator="db" javascript="CodeMonitorAction">
+            <param name="class" value="tydic.reports.codeMonitor.CodeMonitorAction"/>
+        </create>
+         <create creator="db" javascript="ServiceReActiveAction">
+            <param name="class" value="tydic.reports.customerKeep.serviceProcessAnalysis.ServiceReActiveAction"/>
+        </create>
+        <!--全渠道总体分析-->
+        <create creator="db" javascript="AllBusinessAction">
+            <param name="class" value="tydic.reports.channel.allBusiness.AllBusinessAction"/>
+        </create>
+        <create creator="db" javascript="AllBusinessAction_New">
+            <param name="class" value="tydic.reports.channel.allBusiness.AllBusinessAction_New"/>
+        </create>
+        <create creator="db" javascript="AllChannelAction">
+            <param name="class" value="tydic.reports.channel.allBusiness.AllChannelAction"/>
+        </create>
+        <!--投诉指标监测-->
+        <create creator="db" javascript="CmplIndexAction">
+            <param name="class" value="tydic.reports.complain.monitorDay.CmplIndexAction"/>
+        </create>
+        <!--客户满意率-->
+        <create creator="db" javascript="CustomerSatisfiedAction">
+            <param name="class" value="tydic.reports.customerSatisfied.CustomerSatisfiedAction"/>
+        </create>
+        <!--核心环节通用模型  -->
+        <create creator="db" javascript="BusiStepGeneralAction">
+            <param name="class" value="tydic.portalCommon.coreLink.coreCommon.BusiStepGeneralAction"/>
+        </create>
+        <!--生命周期投诉率  -->
+        <create creator="db" javascript="CmplRateAction">
+            <param name="class" value="tydic.portalCommon.coreLink.rate.CmplRateAction"/>
+        </create>        
+        <!--权重配置-->
+        <create creator="db" javascript="BusiStepConfigAction">
+            <param name="class" value="tydic.portalCommon.coreLink.config.BusiStepConfigAction"/>
+        </create> 
+        <!--临界值报表 -->
+        <create creator="db" javascript="CriticalMonAction">
+            <param name="class" value="tydic.portalCommon.coreLink.critical.CriticalMonAction"/>
+        </create>          
+        <!--服务管理配置-->
+        <create creator="db" javascript="SerProManageAction">
+            <param name="class" value="tydic.portalCommon.serviceManage.SerProManageAction"/>
+        </create>
+        <!--服务报告  -->
+        <create creator="db" javascript="MakeReportAction">
+            <param name="class" value="tydic.portalCommon.serviceManage.report.MakeReportAction"/>
+        </create> 
+        <!--填写上报 -->
+        <create creator="db" javascript="WriteReportAction">
+            <param name="class" value="tydic.portalCommon.serviceManage.report.WriteReportAction"/>
+        </create> 
+        <!--数据导入 -->
+       <create creator="db" javascript="ImplDataAction">
+            <param name="class" value="tydic.portalCommon.implData.ImplDataAction"/>
+       </create> 
+        <!--综调障碍数据清单报表  -->
+        <create creator="db" javascript="FaultDetailAction">
+            <param name="class"   value="tydic.portalCommon.procedure.faultDetail.FaultDetailAction"/>
+        </create>  
+        <!--综调开通装移机清单报表   -->
+        <create creator="db" javascript="RptOpenDetailAction">
+            <param name="class"   value="tydic.portalCommon.procedure.rptOpenDetail.RptOpenDetailAction"/>
+        </create>   
+        <!--综调日监测报表   -->
+        <create creator="db" javascript="MaintionMonitorDayAction">
+            <param name="class"   value="tydic.portalCommon.procedure.zd.day.MaintionMonitorDayAction"/>
+        </create>  
+        <!--综调月监测报表   -->
+        <create creator="db" javascript="MaintionMonitorMonAction">
+            <param name="class"   value="tydic.portalCommon.procedure.zd.mon.MaintionMonitorMonAction"/>
+        </create> 
+        <!--宽带新装即时回访清单报表   -->
+        <create creator="db" javascript="ADSLVisitListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.ADSLVisitListAction"/>
+        </create> 
+        <!--宽带修障即时回访清单   -->
+        <create creator="db" javascript="ADSLVisitUpdateListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.update.ADSLVisitUpdateListAction"/>
+        </create>   
+        <!--越级投诉清单   -->
+        <create creator="db" javascript="RptSkipCmplDetailAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.list.RptSkipCmplDetailAction"/>
+        </create>   
+        <!--服务预警类指标日监测报表   -->
+        <create creator="db" javascript="ServWarnDayAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.servWarn.day.ServWarnDayAction"/>
+        </create>  
+        
+        <!--服务预警类指标月监测报表   -->
+        <create creator="db" javascript="ServWarnMonAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.servWarn.mon.ServWarnMonAction"/>
+        </create>  
+        <!--越级投诉月监测   -->
+        <create creator="db" javascript="CmplSpanMonAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.skip.CmplSpanMonAction"/>
+        </create>  
+        <!--工信部申诉月监测  -->
+        <create creator="db" javascript="CmplGxbMonAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.skip.CmplGxbMonAction"/>
+        </create> 
+        
+        <!--越级投诉清单 -->
+        <create creator="db" javascript="CmplSpanDetailAction">
+            <param name="class"   value="tydic.portalCommon.procedure.ts.skip.list.CmplSpanDetailAction"/>
+        </create> 
+        <!--10000号回访满意度清单 -->
+        <create creator="db" javascript="SatisfyVistListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.s10000.SatisfyVistListAction"/>
+        </create> 
+        <!--号百 回访满意度清单 -->
+        <create creator="db" javascript="HbSatisfyVistListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.shb.HbSatisfyVistListAction"/>
+        </create> 
+        <!--网厅 回访满意度清单表 -->
+        <create creator="db" javascript="WtSatisfyVistListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.swt.WtSatisfyVistListAction"/>
+        </create> 
+        <!--掌厅 回访满意度清单表 -->
+        <create creator="db" javascript="ZtSatisfyVistListAction">
+            <param name="class"   value="tydic.portalCommon.procedure.visitDetail.szt.ZtSatisfyVistListAction"/>
+        </create> 
+        <!--健康度模型 -->
+        <create creator="db" javascript="HealthDegreeAction">
+            <param name="class"   value="tydic.reports.healthDegree.HealthDegreeAction"/>
+        </create>
+         <!--批量导出 -->
+        <create creator="db" javascript="BatchImpAction">
+            <param name="class"   value="tydic.reports.batchImp.BatchImpAction"/>
+        </create> 
+        <!--用户管理 -->
+        <create creator="db" javascript="UserManageAction">
+            <param name="class"   value="tydic.meta.module.mag.user.UserManageAction"/>
+        </create>
+        <!-- 新政企的改造 -->
+        <create creator="db" javascript="NewChannelAction">
+           <param name ="class" value="tydic.reports.newChannel.Action.NewChannelAction"/>
+        </create>
+
+        <create creator="db" javascript="GraphAction">
+            <param name="class"   value="tydic.reports.graph.GraphAction"/>
+        </create>
+		<!-- 渠道服务首页指引 -->
+		<create creator="db" javascript="ChannelIndexAction">
+		  <param name="class" value="tydic.portalCommon.channelIndex.ChannelIndexAction"/>
+		</create>
+		
+		<create creator="db" javascript="NewTwoChannelAction">
+		  <param name="class" value="tydic.reports.channel.newChannel.NewChannelAction"/>
+		</create>
+		<create creator="db" javascript="DetailMarketAction">
+            <param name="class"   value="tydic.reports.detailMarket.DetailMarketAction"/>
+        </create>
+        
+        <!-- 多维投诉 -->
+        <create creator="db" javascript="MultDimenAnalyAction">
+            <param name="class"   value="tydic.portalCommon.multDimen.MultDimenAnalyAction"/>
+        </create>
+        
+        <convert converter="bean" match="tydic.portalCommon.ReportPO"/>
+        <convert converter="bean" match="tydic.portalCommon.serviceControl.StepInstallBean"/>
+        <convert converter="bean" match="tydic.portalCommon.serviceControl.StepFaultBean"/>
+        <convert converter="bean" match="tydic.portalCommon.coreLink.config.BusiStepConfigBean"/>
+        <convert converter="bean" match="tydic.portalCommon.coreLink.config.ObjectConfigBean"/>
+        
+    </allow>
+</dwr>

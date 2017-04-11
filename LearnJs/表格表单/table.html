@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>table pratice</title>
+	</head>
+	<body>
+		<table  width="700" align="center" border="2">
+			<tr >											
+				<th width="30%" align="center">编号</th>
+				<th width="30%" align="center">名称</th>
+				<th align="center">性格</th>               <!--不用指定宽度了-->
+			</tr>
+			
+			<tr>
+				<td valign="top" height="50">1</td>			<!--指定高度，，valign是垂直对齐方式-->
+				<td valign="middle">小猫咪</td>
+				<td valign="bottom">温顺</td>
+			</tr> 
+			
+			<tr>
+				<td rowspan="2" colspan="2" >
+					<font size="5" color="red">我是狮子</font></td>			<!--原来文字默认是靠左居中的-->
+				<td >暴躁</td>
+			</tr>	
+			<tr>
+				<td>非常暴躁！</td>
+			</tr>							<!--因为上面的td 行列都需要span了两杯，所以要再弄一个tr来-->
+			
+			<tr>
+				<td >3</td>			
+				<td >蛇</td>
+				<td >冷酷</td>
+			</tr> 
+			
+		</table>
+	
+	</body>
